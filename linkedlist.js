@@ -76,11 +76,16 @@ let linkedList = function() {
   }
 
   let contains = function(value) {
+    let currentHead = getHead();
 
-  }
-
-  let find = function(value) {
-
+    while (!(currentHead.nextNode == null)) {
+      if (currentHead.value == value) {
+        console.log('true');
+        return;
+      }
+      currentHead = currentHead.nextNode;
+    }
+    console.log('false');
   }
 
   let toString = function() {
@@ -116,6 +121,8 @@ list.appendValue("spiders");
 list.size();
 list.indexLocation(4);
 list.pop();
+list.contains("dog");
+list.contains("spooder");
 
 
 
